@@ -16,6 +16,7 @@ topNav.id = 'topNav';
 
 //create logo and set source image/alt
 let logoImage = document.createElement('img');
+logoImage.id = 'logoImage';
 logoImage.src = logo;
 logoImage.alt = 'Restaurant logo'
 
@@ -56,6 +57,7 @@ const resetPage = function resetPage() {
 
 //generate the initial page
 resetPage();
+generateHomeTab();
 
 //add event listeners to all topNav links
 topNav.addEventListener('click', (event) => {
