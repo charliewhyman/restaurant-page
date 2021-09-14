@@ -39,6 +39,8 @@ const generateHomeTab = function generateHomeTab() {
 
     //append banner elements
     document.getElementById('bannerContainer').appendChild(bannerImage);
+    document.getElementById('bannerContainer').appendChild(restaurantTitle);
+    document.getElementById('bannerContainer').appendChild(restaurantHeadline);
 
     //append container elements
     document.getElementById('copyContainer').appendChild(copyTitle);
