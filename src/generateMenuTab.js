@@ -30,22 +30,22 @@ const generateMenuTab = function generateMenuTab() {
     //create array of menu item objects
 
     let menuItems = [
-        {category:'Starters', item:'Nocellara', price:'4', description:'Fresh Queen Nocellara olives from Sicily, with a buttery flavour'},
-        {category:'Starters', item:'Bruchetta', price:'5', description:'Grilled sourdough bread, rubbed with garlic and topped with fresh Pisanello tomatoes from Tuscany'},
-        {category:'Starters', item:'Pane', price:'3', description:'Sourdough bread with extra virgin olive oil and balsamic vinegar'},
-        {category:'Starters', item:'Burrata', price:'6', description:'Full-bodied Apulian buffalo cheese'},
-        {category:'Starters', item:'Friarielli', price:'5', description:'A variety of broccoli from Napoli, lightly seared and served with homemade bread'},
+        {category:'Starters', item:'Nocellara', price:'4.70', description:'Fresh Queen Nocellara olives from Sicily, with a buttery flavour'},
+        {category:'Starters', item:'Bruchetta', price:'4.90', description:'Grilled sourdough bread, rubbed with garlic and topped with fresh Pisanello tomatoes from Tuscany'},
+        {category:'Starters', item:'Pane', price:'3.20', description:'Sourdough bread with extra virgin olive oil and balsamic vinegar'},
+        {category:'Starters', item:'Burrata', price:'6.30', description:'Full-bodied Apulian buffalo cheese'},
+        {category:'Starters', item:'Friarielli', price:'5.50', description:'A variety of broccoli from Napoli, lightly seared and served with homemade bread'},
 
-        {category:'Pizza', item:'Margherita', price:'14', description:'San Marzano tomatoes and sliced mozzarella di bufala Campana'},
-        {category:'Pizza', item:'Quattro', price:'16', description:'San Marzano tomatoes, mozzarella, stracchino, fontina, gorgonzola'},
-        {category:'Pizza', item:'Bianca', price:'11', description:'Extra virgin olive oil, sea salt flakes and rosemary sprigs'},
-        {category:'Pizza', item:'Viennese', price:'13', description:'San Marzano tomatoes, mozzarella, n\'duja and oregano'},
-        {category:'Pizza', item:'Napolitana', price:'13', description:'San Marzano tomatoes, mozzarella di bufala Campana and Agostino Recca anchovies'},
+        {category:'Pizza', item:'Margherita', price:'13.50', description:'San Marzano tomatoes and sliced mozzarella di bufala Campana'},
+        {category:'Pizza', item:'Quattro', price:'16.70', description:'San Marzano tomatoes, mozzarella, stracchino, fontina, gorgonzola'},
+        {category:'Pizza', item:'Bianca', price:'11.20', description:'Extra virgin olive oil, sea salt flakes and rosemary sprigs'},
+        {category:'Pizza', item:'Viennese', price:'13.30', description:'San Marzano tomatoes, mozzarella, n\'duja and oregano'},
+        {category:'Pizza', item:'Napolitana', price:'13.90', description:'San Marzano tomatoes, mozzarella di bufala Campana and Agostino Recca anchovies'},
 
-        {category:'Pasta', item:'Cacio', price:'12', description:'Tonnarelli (square-cut spaghetti) with salty pecorino romano and black pepper'},
-        {category:'Pasta', item:'Ravioli', price:'14', description:'Homemade butternut ravioli with brown butter and sage'},
-        {category:'Pasta', item:'Tagliatelle', price:'15', description:'Fresh basil pesto & pine nuts with tagliatelle'},
-        {category:'Pasta', item:'Fettucine', price:'16', description:'Fettucine with an earthy black truffle alfredo sauce'},
+        {category:'Pasta', item:'Cacio', price:'12.10', description:'Tonnarelli (square-cut spaghetti) with salty pecorino romano and black pepper'},
+        {category:'Pasta', item:'Ravioli', price:'14.70', description:'Homemade butternut ravioli with brown butter and sage'},
+        {category:'Pasta', item:'Tagliatelle', price:'15.30', description:'Fresh basil pesto & pine nuts with tagliatelle'},
+        {category:'Pasta', item:'Fettucine', price:'16.20', description:'Fettucine with an earthy black truffle alfredo sauce'},
 
      ];
 
@@ -101,7 +101,7 @@ generateMenuDivs();
             menuItem.textContent = item.item;
 
             let descriptionItem = document.createElement('p');
-            descriptionItem.textContent = item.description;
+            descriptionItem.textContent = item.description + '. '+ '\u00A0' + item.price;
             
             //append the text elements
 
@@ -112,7 +112,6 @@ generateMenuDivs();
 
             targetContainer.appendChild(menuItem);
             targetContainer.appendChild(descriptionItem);
-
         };
     };
 

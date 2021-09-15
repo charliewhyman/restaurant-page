@@ -11,6 +11,9 @@ let divContent = document.getElementById('content');
 let topNav = document.createElement('div');
 topNav.className = 'container';
 topNav.id = 'topNav';
+topNav.style.position = 'sticky';
+topNav.style.top = '0px'
+topNav.style.zIndex = '999';
 
 //create child elements
 
@@ -55,10 +58,6 @@ const resetPage = function resetPage() {
     document.getElementById('topNav').appendChild(contactLink);
 };
 
-//generate the initial page
-resetPage();
-generateHomeTab();
-
 //add event listeners to all topNav links
 topNav.addEventListener('click', (event) => {
     const isLink = event.target.tagName.toLowerCase() === 'a';
@@ -73,3 +72,7 @@ topNav.addEventListener('click', (event) => {
         generateContactTab();
     };
 });
+
+//generate the initial page
+resetPage();
+generateHomeTab();

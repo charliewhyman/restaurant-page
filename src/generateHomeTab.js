@@ -31,14 +31,16 @@ const generateHomeTab = function generateHomeTab() {
     let bannerImage = document.createElement('img');
     bannerImage.src = pastaHeaderImage;
     bannerImage.alt = 'Picture of fresh pasta'
-    bannerImage.style.width = '100%';
-    bannerImage.style.objectFit = 'scale-down'
+    bannerImage.style.width = '75%';
+    bannerImage.style.alignSelf= 'center';
+    bannerImage.style.objectFit = 'cover'
     bannerImage.style.filter = 'grayscale(100%)';
+    bannerImage.style.marginBottom = '1em';
 
     //create text elements
     let restaurantHeadline = document.createElement('h1');
     restaurantHeadline.textContent = 'Fine Italian dining';
-    restaurantHeadline.style.textEmphasis = 'x';
+    restaurantHeadline.style.color = 'x';
 
     let copyTitle = document.createElement('h1');
     copyTitle.textContent = 'The Restaurant';
@@ -62,11 +64,11 @@ const generateHomeTab = function generateHomeTab() {
 
     //append banner elements
     document.getElementById('bannerContainer').appendChild(restaurantHeadline);
-    document.getElementById('bannerContainer').appendChild(bannerImage);
 
     //append container elements
     document.getElementById('copyContainer').appendChild(copyTitle);
     document.getElementById('copyContainer').appendChild(copyText);
+    document.getElementById('copyContainer').appendChild(bannerImage);
     document.getElementById('copyContainer').appendChild(openingTimeTitle);
     document.getElementById('copyContainer').appendChild(weekdayOpeningText);
     document.getElementById('copyContainer').appendChild(saturdayOpeningText);
