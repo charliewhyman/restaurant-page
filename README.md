@@ -1,5 +1,5 @@
 # restaurant-page
-A dynamically-rendered page for a fictional restaurant
+A dynamically-rendered page for a fictional restaurant.
 
 # Introduction
 
